@@ -1,0 +1,29 @@
+<h1>Please fill out form for your shipping cost:</h1>
+
+<form action="/output">
+  <div class="form-group">
+    <label for="length">Length:</label>
+    <input  id="length" type="number" name="length" class="form-control" min="1" step="1">
+  </div>
+  <div class="form-group">
+    <label for="width">Width:</label>
+    <input  id="width" type="number" name="width" class="form-control" min="1" step="1">
+  </div>
+  <div class="form-group">
+    <label for="height">Height:</label>
+    <input  id="height" type="number" name="height" class="form-control" min="1" step="1">
+  </div>
+  <div class="form-group">
+    <label for="weight">Weight:</label>
+    <input  id="weight" type="number" name="weight" class="form-control" min="1" step="1">
+  </div>
+  <div class="form-group">
+    <label for="delivery_option">Choose delivery option:</label>
+    <select class="" name="delivery_option">
+      <option value="overnight">Overnight</option>
+      <option value="two days">Two day</option>
+      <option value="overnight">Overnight</option>
+    </select>
+  </div>
+  <button type="submit" class="btn">Calculate</button>
+</form>

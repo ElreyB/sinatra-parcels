@@ -18,12 +18,12 @@ class Parcel
     case @delivery_option
     when "overnight"
       standard += 20
-    when "two todays"
+    when "two days"
       standard += 10
     when "standard"
       standard
     else
-      return "Limited shipping option. Plaese choose: overnight, two todays, or standard."
+      return "Limited shipping option. Plaese choose: overnight, two days, or standard."
     end
     standard
   end

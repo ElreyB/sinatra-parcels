@@ -3,7 +3,7 @@ require 'parcel'
 
 describe 'Parcel' do
   let(:parcel1) { Parcel.new(5,5,5,9,"overnight")}
-  let(:parcel2) { Parcel.new(5,5,5,15,"two todays")}
+  let(:parcel2) { Parcel.new(5,5,5,15,"two days")}
   let(:parcel3) { Parcel.new(5,5,5,35,"standard")}
   let(:parcel4) { Parcel.new(5,5,5,35,"sameday")}
 
@@ -45,7 +45,7 @@ describe 'Parcel' do
     end
 
     it 'will return delivery error' do
-      expect(parcel4.delivery_cost).to eq "Limited shipping option. Plaese choose: overnight, two todays, or standard."
+      expect(parcel4.delivery_cost).to eq "Limited shipping option. Plaese choose: overnight, two days, or standard."
     end
   end
 
