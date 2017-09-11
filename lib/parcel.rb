@@ -1,20 +1,21 @@
 class Parcel
-  attr_reader :length, :width, :height, :weight
+  attr_reader :length, :width, :height, :weight, :delivery_option
 
-  def initialize(length, width, height, weight)
+  def initialize(length, width, height, weight, delivery_option)
     @length = length
     @width = width
     @height = height
     @weight = weight
+    @delivery_option = delivery_option
   end
 
   def volume
     @length * @width * @height
   end
 
-  def delivery_cost(delivery_option)
+  def delivery_cost
     standard = 5
-    case delivery_option
+    case @delivery_option
     when "overnight"
       standard += 20
     when "two todays"
@@ -40,4 +41,7 @@ class Parcel
     cost
   end
 
+  def cost_to_ship
+    weight_cost + delivery_cost + (volume * 2)
+  end
 end
