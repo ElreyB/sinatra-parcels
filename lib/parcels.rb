@@ -8,4 +8,7 @@ class Parcels
     @weight = weight
   end
 
+  def volume
+    @length * @width * @height
+  end
 end
