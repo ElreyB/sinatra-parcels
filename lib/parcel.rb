@@ -26,4 +26,18 @@ class Parcel
     end
     standard
   end
+
+  def weight_cost
+    cost = 0
+    case @weight
+    when (0..10)
+      cost = 5
+    when (11..30)
+      cost = 10
+    when (31..100)
+      cost = 15
+    end
+    cost
+  end
+
 end

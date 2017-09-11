@@ -3,6 +3,8 @@ require 'parcel'
 
 describe 'Parcel' do
   let(:parcel1) { Parcel.new(5,5,5,9)}
+  let(:parcel2) { Parcel.new(5,5,5,15)}
+  let(:parcel3) { Parcel.new(5,5,5,35)}
 
   describe '#initialize' do
     it 'has a readable length' do
@@ -45,5 +47,24 @@ describe 'Parcel' do
       expect(parcel1.delivery_cost("sameday")).to eq "Limited shipping option. Plaese choose: overnight, two todays, or standard."
     end
   end
+
+  describe '#weight_cost' do
+    it 'will return weight cost base of @weight' do
+      expect(parcel1.weight_cost).to eq 5
+    end
+
+    it 'will return weight cost base of @weight' do
+      expect(parcel2.weight_cost).to eq 10
+    end
+
+    it 'will return weight cost base of @weight' do
+      expect(parcel3.weight_cost).to eq 15
+    end
+  end
+  # describe '#cost_to_ship' do
+  #   it 'return shipping cost' do
+  #     expect(parcel1.cost_to_ship),to eq
+  #   end
+  # end
 
 end
